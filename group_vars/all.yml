@@ -6,14 +6,14 @@
 #resolv_domain: galaxyproject.org
 #resolv_search: galaxyproject.org
 
-dc: ufr-rz
+#dc: ufr-rz
 
 # Telegraf
 telegraf_agent_output:
   - type: influxdb
     config:
-    - urls = ["http://influxdb.denbi.uni-freiburg.de:8086"]
-    - database = "rancher"
+    - urls = ["http://stats.genome.edu.au:8086"]
+    - database = "galaxy"
 
 telegraf_plugins_default:
   - plugin: cpu
@@ -28,7 +28,6 @@ telegraf_plugins_default:
   - plugin: swap
   - plugin: net
   - plugin: netstat
-  - plugin: chronyd
 
 unattended_origins_patterns:
 - 'origin=Ubuntu,archive=${distro_codename}'
@@ -40,13 +39,6 @@ unattended_automatic_reboot: true
 unattended_minimal_steps: true
 unattended_remove_unused_dependencies: true
 
-# Anything else prevents more login
-ssh_use_pam: true
-# Required if you want to run ansible more than once.
-sftp_enabled: true
-
-galaxy_uid: 999
-galaxy_gid: 999
 
 yum_cron_conf:
   base:

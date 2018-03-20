@@ -7,7 +7,7 @@ certbot_environment: production #staging
 certbot_domains:
   - "{{ hostname }}"
 certbot_agree_tos: --agree-tos
-certbot_admin_email: security@usegalaxy.eu
+certbot_admin_email: simon.gladman@unimelb.edu.au
 certbot_post_renewal: |
     cp /etc/letsencrypt/live/{{ hostname }}/fullchain.pem /etc/ssl/certs/{{ hostname }}
     cp /etc/letsencrypt/live/{{ hostname }}/privkey.pem   /etc/ssl/private/privkey.pem
