@@ -3,21 +3,22 @@
   hosts: grafana
   become: true
   vars_files:
-    - "secret_group_vars/pgs.yml"
+    #- "secret_group_vars/pgs.yml"
     - "secret_group_vars/grafana.yml"
-    - "secret_group_vars/all.yml"
-    - [ "secret_host_vars/{{ inventory_hostname }}.yml", "secret_host_vars/default.yml" ]
+    #- "secret_group_vars/all.yml"
+    #- [ "secret_host_vars/{{ inventory_hostname }}.yml", "secret_host_vars/default.yml" ]
   vars:
-    hostname: stats.usegalaxy.eu
+    hostname: stats.genome.edu.au
   roles:
-    #- hostname
-    #- influxdata.chrony
-    #- hxr.certbot
-    #- hxr.admin-tools
-    #- geerlingguy.nginx
+#    - hostname
+#    - influxdata.chrony
+#    - hxr.certbot
+#    - hxr.admin-tools
+#    - geerlingguy.nginx
+#    - dj-wasabi.telegraf
     - hxr.simple-nagios
-    #- picotrading.ansible-grafana
+#    - picotrading.ansible-grafana
+#    - mtchavez.influxdb
     #- pgs
-    #- dj-wasabi.telegraf
     #- dev-sec.os-hardening
     #- dev-sec.ssh-hardening

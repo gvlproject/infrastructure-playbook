@@ -12,8 +12,8 @@ dc: ufr-rz
 telegraf_agent_output:
   - type: influxdb
     config:
-    - urls = ["http://influxdb.denbi.uni-freiburg.de:8086"]
-    - database = "rancher"
+    - urls = ["http://stats.genome.edu.au:8086"]
+    - database = "telegraf"
 
 telegraf_plugins_default:
   - plugin: cpu
